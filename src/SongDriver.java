@@ -8,13 +8,35 @@ public class SongDriver
         Song deadLochs = new Song("Deadlochs", "Blue Face", true, 150, 3.57);
         Song overture = new Song("1812 Overture", "Petyr Ilych Ichaicovsky", false, 1093, 11.11);
         Song happySong = new Song("Moi", "The Happy Song", true);
+        Song happySong2 = new Song("Moi", "The Happy Song", true);
+        Song happySong3 = happySong;
+
+        if(happySong == happySong2)
+        {
+            System.out.println("They are the same");
+        }//end if
+        else
+        {
+            System.out.println("They are NOT the same");
+        }//end else
+
+        if(happySong == happySong3)
+        {
+            System.out.println("They are the same");
+        }//end if
+        else
+        {
+            System.out.println("They are NOT the same");
+        }//end else
+
+        System.out.println("There are " + Song.getCount() + " songs on this list.");
 
         //4 Checking other methods and properties
-        deadLochs.setLength(-5);
-        System.out.println(deadLochs);
+        //deadLochs.setLength(-5);
+        //System.out.println(deadLochs);
 
         //fireworks.title = "Happy Song";
-        //System.out.println(fireworks);
+        // System.out.println(fireworks);
 /*
         //3. Testing getters
         System.out.println(fireworks.getTitle());
