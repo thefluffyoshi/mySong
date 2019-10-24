@@ -1,4 +1,4 @@
-public class Song
+public class Song implements Comparable<Song>
 {
     //1) Instance Variables
     private String title;
@@ -73,6 +73,23 @@ public class Song
 
 
     //6) Brain Methods
+    
+    public int compareTo(Song someSong)
+    {
+        if (this.length < someSong.length)
+        {
+            return -1;
+        }
+        else if (this.length == someSong.length)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }//end compareTo implemented from interface Comparable
+
     public String toMinSec()
     {
         int minutes = length / 60;
